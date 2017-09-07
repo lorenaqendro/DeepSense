@@ -8,7 +8,8 @@ https://www.dropbox.com/s/z7zpnwh2ndthd2n/sepHARData_a.tar.gz?dl=0
 
 ------
 
-Updated by zh zhan(2017-09-07):
+## Updated by zhezh(2017-09-07):
+
 This modified version boosts training speed over 10 times by using a tfrecord file (stored in SSD partition) instead of seperate files.
 
 ### Changes:
