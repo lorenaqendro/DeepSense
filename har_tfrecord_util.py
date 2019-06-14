@@ -1,5 +1,4 @@
 import os
-
 import tensorflow as tf
 import numpy as np
 
@@ -19,8 +18,7 @@ def csv_to_example(fname):
     text = np.loadtxt(fname, delimiter=',')
     features = text[:WIDE*FEATURE_DIM]
     label = text[WIDE*FEATURE_DIM:]
-    features = tf.reshape(features, [WIDE, FEATURE_DIM])
-
+    
     example = tf.train.Example(features=tf.train.Features(feature={
         "label": tf.train.Feature(float_list=tf.train.FloatList(value=label)),
         'example': tf.train.Feature(float_list=tf.train.FloatList(value=features))
